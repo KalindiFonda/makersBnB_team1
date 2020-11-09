@@ -3,8 +3,6 @@
 
 Basic specifications:
 
-Any signed-up user can request to hire any space for one night, and this should be approved by the user that owns that space.
-
 
 MVP:
 - list of available properties
@@ -13,6 +11,10 @@ MVP:
   - availability (calendar) true/false
 
 - user registration/logging in (username & pass)
+
+HOST
   - lists properties (1 or more)
-      - approval
-  - who book a property
+  - confirmation: approval/no approval --> block off the calendar, no other person can book
+
+GUEST
+  - book a property
