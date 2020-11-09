@@ -61,3 +61,15 @@ As a user
 So that I can view and post cats
 I want to be able to make an account
 ```
+
+
+### What is going on?
+[link to rake setup](https://github.com/sinatra/sinatra-recipes/blob/master/databases/postgresql-activerecord.md)
+
+
+
+### How to set up db:
+In db/migrate go through 01-03 for test_db and db with this command:
+```
+psql -f db/migrate/filename.sql
+```
