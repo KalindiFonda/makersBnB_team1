@@ -71,5 +71,8 @@ I want to be able to make an account
 ### How to set up db:
 In db/migrate go through 01-03 for test_db and db with this command:
 ```
-psql -f db/migrate/filename.sql
+psql -f db/migrate/00_setup.sql
+```
+```
+psql -f db/migrate/00_setup_test.sql
 ```
