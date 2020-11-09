@@ -1,6 +1,6 @@
 require 'pg'
 
-class Cat 
+class Cat
 
   def self.all
     if ENV['RACK_ENV'] == 'test'
@@ -9,7 +9,7 @@ class Cat
       connection = PG.connect(dbname: 'cat_manager')
     end
     result = connection.exec('SELECT * FROM cats')
-    result.map {  |cat | cat.values }
+    result.map {  |cat | cat}
   end
 
 
