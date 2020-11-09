@@ -13,7 +13,6 @@
 # it.
 
 # Set the environment to "test"
-ENV['RACK_ENV'] = 'test'
 
 # Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
@@ -24,7 +23,10 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require_relative './setup_test_database'
 
+
+ENV['RACK_ENV'] = 'test'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                      SimpleCov::Formatter::Console
@@ -36,6 +38,12 @@ SimpleCov.start
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = CatManager
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

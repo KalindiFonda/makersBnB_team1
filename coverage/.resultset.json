@@ -1,7 +1,18 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/lornaroberts/Projects/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
     },
-    "timestamp": 1604935929
+    "timestamp": 1604940799
   }
 }
