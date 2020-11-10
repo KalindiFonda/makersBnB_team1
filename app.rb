@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './models/cat'
+require './database_connection_setup'
 
 
 class CatManager < Sinatra::Base
