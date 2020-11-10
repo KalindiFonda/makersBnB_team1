@@ -1,0 +1,9 @@
+\c cat_manager
+
+CREATE TABLE bookings (
+	id serial PRIMARY KEY,
+	cat_id INTEGER REFERENCES cats (id),
+	booking_start DATE NOT NULL,
+	booking_end DATE NOT NULL,
+  user_id VARCHAR (30)
+);
