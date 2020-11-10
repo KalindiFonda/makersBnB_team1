@@ -3,7 +3,9 @@
   width: 50%;
   text-align: center;
 }
-
+.adding {
+  display: inline-block;
+}
 .cat-picture{
 width: 100px;
 }
@@ -12,7 +14,16 @@ h1{
   font-size: 60px;
   color: #81C7C7;
   text-align: center;
+  display: inline-block;
 
+}
+
+.heading{
+  text-align: center;
+}
+
+.newcat{
+  text-align: center;
 }
 table{
   margin: 0 auto;
