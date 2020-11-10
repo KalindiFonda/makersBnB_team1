@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/fabihahassan/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/features/list_all_cats_spec.rb": {
         "lines": [
           null,
           1,
@@ -12,8 +12,39 @@
           null,
           null
         ]
+      },
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/features/show_cat_profile_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/units/get_cat_name_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1604942231
+    "timestamp": 1605007864
   }
 }

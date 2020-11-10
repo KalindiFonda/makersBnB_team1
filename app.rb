@@ -3,10 +3,17 @@ require './models/cat'
 
 
 class CatManager < Sinatra::Base
+
   get '/' do
     @cats = Cat.all
-    p @cats
     erb :index
+  end
+
+  get '/cats/:id' do
+    @cat = Cat.find_by(id: params[:id])
+    p @cat
+    p "hello"
+    erb :"cats/cat_profile"
   end
 
   run! if app_file == $0
