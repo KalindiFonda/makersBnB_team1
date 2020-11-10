@@ -7,7 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
  </head>
  <body>
-   <h1>Paws & Claws</h1>
+   <table>
+     <tr>
+       <td class="heading" style="width 75%">
+         <h1>Paws & Claws</h1>
+       </td>
+       <td class="newcat" style="width 25%">
+         <a href="/add"><button class="adding" type="button" name="add_cats"> Add a cat</button></a>
+       </td>
+     </tr>
+   </table>
 <table>
 
     <tr>
@@ -23,7 +32,7 @@
       <td><%= cat.description %></td>
       <td> <img class="cat-picture" src='<%=cat.picture%>' alt="picture of a cat"></td>
       <td><%= cat.price %></td>
-      <td> <a href="http://localhost:9292/cats/<%=cat.id%>"><button style="button">Profile</button></a></td>
+      <td> <a href="/cats/<%=cat.id%>"><button style="button">Profile</button></a></td>
     </tr>
     <% end %>
   </table>
