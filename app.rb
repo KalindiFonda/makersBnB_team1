@@ -20,8 +20,14 @@ class CatManager < Sinatra::Base
   end
 
   post '/add_cat' do
+    # Do you need cat_new instance variable?
     @Cat_new = Cat.create(name: params[:name],description: params[:description] , picture: params[:picture], price: params[:price])
     redirect '/'
+  end
+
+  post '/cats/:id/book' do
+    Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date])
+    redirect "cats/:id"
   end
 
   run! if app_file == $0
