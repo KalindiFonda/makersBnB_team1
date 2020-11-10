@@ -1,9 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/fabihahassan/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
+      "/Users/heatherwarman/Coding/Cats/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
         "lines": [
           null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -59,6 +62,7 @@
         ]
       }
     },
+
     "timestamp": 1605011513
   }
 }

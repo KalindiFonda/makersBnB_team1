@@ -1,0 +1,19 @@
+.cat-picture{
+width: 100px;
+}
+h1{
+  font-family:'Quicksand', sans-serif !important;
+  font-size: 60px;
+  color: #81C7C7;
+  text-align: center;
+
+}
+table{
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+td{
+  margin: 0 auto;
+  text-align: center;
+}
