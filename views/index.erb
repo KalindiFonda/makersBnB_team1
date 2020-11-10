@@ -1,5 +1,28 @@
-<ul>
-  <% @cats.each do |cat| %>
-    <li><%= cat %></li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Paws & Claws</title>
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+ </head>
+ <body>
+   <h1>Paws & Claws</h1>
+<table>
+    <tr>
+      <th> Name </th>
+      <th> Description </th>
+      <th> Picture </th>
+      <th> Price Per Day </th>
+      </tr>
+      <tr>
+    <% @cats.each do |cat| %>
+      <td><%= cat["name"] %></td>
+      <td><%= cat["description"] %></td>
+      <td> <img class="cat-picture" src='<%=cat["picture"]%>' alt="picture of a cat"></td>
+      <td><%= cat["price"] %></td>
+    <% end %>
+    </tr>
+  </table>
+</body>
+</html>
