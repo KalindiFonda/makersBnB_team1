@@ -76,3 +76,17 @@ psql -f db/migrate/00_setup.sql
 ```
 psql -f db/migrate/00_setup_test.sql
 ```
+
+
+
+### Booking Setup:
+
+| ID | cat_ID | booking_start | booking_end | (future)user_id   |
+|:----:|:----:|:----:|:----:|:----:|
+
+
+to add bookings table:
+```
+psql -f db/migrate/04_create_bookings_table_test.sql
+psql -f db/migrate/04_create_bookings_table.sql
+```
