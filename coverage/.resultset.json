@@ -1,9 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/heatherwarman/Coding/Cats/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
+      "/Users/lornaroberts/Projects/makersBnB_team1/spec/features/add_cat_spec.rb": {
         "lines": [
-          null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -16,7 +18,22 @@
           null
         ]
       },
-      "/Users/fabihahassan/makersBnB_team1/spec/features/show_cat_profile_spec.rb": {
+      "/Users/lornaroberts/Projects/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/lornaroberts/Projects/makersBnB_team1/spec/features/show_cat_profile_spec.rb": {
         "lines": [
           1,
           1,
@@ -30,7 +47,7 @@
           null
         ]
       },
-      "/Users/fabihahassan/makersBnB_team1/spec/units/get_cat_name_spec.rb": {
+      "/Users/lornaroberts/Projects/makersBnB_team1/spec/units/get_cat_name_spec.rb": {
         "lines": [
           1,
           1,
@@ -62,7 +79,6 @@
         ]
       }
     },
-
-    "timestamp": 1605011513
+    "timestamp": 1605021609
   }
 }

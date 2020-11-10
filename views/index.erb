@@ -9,20 +9,23 @@
  <body>
    <h1>Paws & Claws</h1>
 <table>
+
     <tr>
       <th> Name </th>
       <th> Description </th>
       <th> Picture </th>
       <th> Price Per Day </th>
+      <th> Link to Profile </th>
       </tr>
+      <% @cats.each do |cat| %>
       <tr>
-    <% @cats.each do |cat| %>
       <td><%= cat.name %></td>
       <td><%= cat.description %></td>
       <td> <img class="cat-picture" src='<%=cat.picture%>' alt="picture of a cat"></td>
       <td><%= cat.price %></td>
-    <% end %>
+      <td> <a href="http://localhost:9292/cats/<%=cat.id%>"><button style="button">Profile</button></a></td>
     </tr>
+    <% end %>
   </table>
 </body>
 </html>
