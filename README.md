@@ -7,7 +7,7 @@ Basic specifications:
 MVP:
 - list of available cats
 - post cats
-  - name, description, price/night
+  - name, description, price/day
   - availability (calendar) true/false
 
 - user registration/logging in (username & pass)
@@ -61,7 +61,11 @@ As a user
 So that I can view and post cats
 I want to be able to make an account
 ```
-
+```
+As a cat
+So that I can review my host
+I want to be able to leave a review of the host.
+```
 
 ### What is going on?
 [link to rake setup](https://github.com/sinatra/sinatra-recipes/blob/master/databases/postgresql-activerecord.md)
@@ -75,4 +79,18 @@ psql -f db/migrate/00_setup.sql
 ```
 ```
 psql -f db/migrate/00_setup_test.sql
+```
+
+
+
+### Booking Setup:
+
+| ID | cat_ID | booking_start | booking_end | (future)user_id   |
+|:----:|:----:|:----:|:----:|:----:|
+
+
+to add bookings table:
+```
+psql -f db/migrate/04_create_bookings_table_test.sql
+psql -f db/migrate/04_create_bookings_table.sql
 ```
