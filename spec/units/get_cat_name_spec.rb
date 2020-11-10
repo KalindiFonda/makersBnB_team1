@@ -1,7 +1,8 @@
 describe Cat do
   describe '#initialize' do
     it "creates a cat object" do
-      cat = insert_cat
+      cat = Cat.create(name: "Fluffy", description: "The fluffiest cat",
+        picture: "https://placekitten.com/g/200/300", price: 300)
       expect(cat).to be_a Cat
     end
   end

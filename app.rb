@@ -11,7 +11,6 @@ class CatManager < Sinatra::Base
 
   get '/cats/:id' do
     @cat = Cat.find_by(id: params[:id])
-    p @cat
     erb :"cats/cat_profile"
   end
 
