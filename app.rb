@@ -15,6 +15,15 @@ class CatManager < Sinatra::Base
     erb :"cats/cat_profile"
   end
 
+  get '/add' do
+    erb :"add_cat"
+  end
+
+  post '/add_cat' do
+    @Cat_new = Cat.create(name: params[:name],description: params[:description] , picture: params[:picture], price: params[:price])
+    redirect '/'
+  end
+
   run! if app_file == $0
 
 end

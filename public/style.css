@@ -1,3 +1,9 @@
+.add_form{
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
 .cat-picture{
 width: 100px;
 }
@@ -10,7 +16,7 @@ h1{
 }
 table{
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   text-align: center;
 }
 td{
