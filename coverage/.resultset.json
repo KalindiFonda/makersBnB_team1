@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/fabihahassan/makersBnB_team1/spec/features/add_cat_spec.rb": {
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/features/add_cat_spec.rb": {
         "lines": [
           1,
           1,
@@ -18,7 +18,7 @@
           null
         ]
       },
-      "/Users/fabihahassan/makersBnB_team1/spec/features/list_all_cats_spec.rb": {
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/features/list_all_cats_spec.rb": {
         "lines": [
           null,
           1,
@@ -33,7 +33,7 @@
           null
         ]
       },
-      "/Users/fabihahassan/makersBnB_team1/spec/features/show_cat_profile_spec.rb": {
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/features/show_cat_profile_spec.rb": {
         "lines": [
           1,
           1,
@@ -57,7 +57,7 @@
           null
         ]
       },
-      "/Users/fabihahassan/makersBnB_team1/spec/units/database_connection_spec.rb": {
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/units/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -86,7 +86,7 @@
           null
         ]
       },
-      "/Users/fabihahassan/makersBnB_team1/spec/units/get_cat_name_spec.rb": {
+      "/Users/kalindifonda/Desktop/makers/7_week/makersBnB/spec/units/get_cat_name_spec.rb": {
         "lines": [
           1,
           1,
@@ -118,6 +118,6 @@
         ]
       }
     },
-    "timestamp": 1605026509
+    "timestamp": 1605027055
   }
 }

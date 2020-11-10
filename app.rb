@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './models/cat'
+require './models/booking'
 require './database_connection_setup'
 
 
@@ -26,8 +27,8 @@ class CatManager < Sinatra::Base
   end
 
   post '/cats/:id/book' do
-    Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date])
-    redirect "cats/:id"
+    Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date], user_id: 10)
+    redirect "cats/#{:id}"
   end
 
   run! if app_file == $0
