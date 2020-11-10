@@ -17,10 +17,10 @@
       </tr>
       <tr>
     <% @cats.each do |cat| %>
-      <td><%= cat["name"] %></td>
-      <td><%= cat["description"] %></td>
-      <td> <img class="cat-picture" src='<%=cat["picture"]%>' alt="picture of a cat"></td>
-      <td><%= cat["price"] %></td>
+      <td><%= cat.name %></td>
+      <td><%= cat.description %></td>
+      <td> <img class="cat-picture" src='<%=cat.picture%>' alt="picture of a cat"></td>
+      <td><%= cat.price %></td>
     <% end %>
     </tr>
   </table>
