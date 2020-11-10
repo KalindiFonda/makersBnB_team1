@@ -32,7 +32,8 @@ class Cat
     end
 
     result = connection.exec("SELECT * FROM cats WHERE id=#{id};")
-    result.map { |cat| cat }.first
+    result.map { |cat| new(id: cat["id"], name: cat["name"], description: cat["description"],
+                picture: cat["picture"], price: cat["price"])}.first
   end
 
   def self.create(name: ,description: , picture: , price: )
