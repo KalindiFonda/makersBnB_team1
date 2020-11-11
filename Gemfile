@@ -11,3 +11,4 @@ gem 'simplecov-console'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
+gem "simple_calendar", "~> 2.0"

@@ -3,6 +3,7 @@ require './models/cat'
 require './models/booking'
 require './database_connection_setup'
 require 'sinatra/flash'
+require 'simple_calendar'
 
 
 class CatManager < Sinatra::Base
