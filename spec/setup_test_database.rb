@@ -1,15 +1,13 @@
 require 'pg'
 
+p "Setting up test database..."
+
 def setup_test_database
   connection = PG.connect(dbname: 'cat_manager_test')
   connection.exec("TRUNCATE cats, bookings;")
 end
 
-def insert_cat
-  connection = PG.connect(dbname: 'cat_manager_test')
-  connection.exec("INSERT INTO cats (name, description, picture, price)
-  VALUES ('Snuggles',
-    'Best to snuggle to',
-    'https://placekitten.com/g/600/300',
-    1000000);")
+def insert_cat(name = 'Snuggles', description = 'Best to snuggle to',
+  picture = 'https://placekitten.com/g/600/300', price = 1000000000)
+  Cat.create(name: name, description: description, picture: picture, price: price)
 end
