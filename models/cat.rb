@@ -25,7 +25,7 @@ class Cat
 
   def self.create(name: ,description: , picture: , price: )
     result = DatabaseConnection.query("INSERT INTO cats (name, description, picture, price)
-              VALUES ('#{name}', '#{description}', '#{picture}', #{price}) RETURNING id, name, description, picture, price")
+              VALUES ('#{name}', '#{description.gsub("'"){"''"}}', '#{picture}', '#{price}') RETURNING id, name, description, picture, price;")
     Cat.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'],
             picture: result[0]['picture'], price: result[0]['price'])
   end

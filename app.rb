@@ -3,6 +3,7 @@ require './models/cat'
 require './models/booking'
 require './database_connection_setup'
 require 'sinatra/flash'
+require 'simple_calendar'
 
 
 class CatManager < Sinatra::Base
@@ -13,6 +14,7 @@ class CatManager < Sinatra::Base
 
   get '/' do
     @cats = Cat.all
+     @user = User.find(session[:user_id])
     erb :index
   end
 
@@ -26,16 +28,25 @@ class CatManager < Sinatra::Base
   end
 
   post '/add_cat' do
-    # Do you need cat_new instance variable?
-    @Cat_new = Cat.create(name: params[:name],description: params[:description] , picture: params[:picture], price: params[:price])
+    Cat.create(name: params[:name],description: params[:description] , picture: params[:picture], price: params[:price])
     redirect '/'
   end
 
   post '/cats/:id/book' do
     Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date], user_id: 10)
-    flash[:notice] = "You got a Booked."
-    redirect "cats/#{:id}"
+    flash[:notice] = "You made a booking request."
+    redirect "cats/#{params[:id]}"
   end
+
+  get '/users/new' do
+  erb :"users/new"
+end
+
+post '/users' do
+  User.create(email: params[:email], password: params[:password])
+    @user = User.find(session[:user_id])
+  redirect '/'
+end
 
   run! if app_file == $0
 
