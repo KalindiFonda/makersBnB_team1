@@ -2,3 +2,12 @@
 <img src="<%= @cat.picture %>" alt="Cat Picture">
 <p><%= @cat.description %></p>
 <p><%= @cat.price %></p>
+Dates Available <br>
+Book
+<form action="/cats/<%= @cat.id %>/book" method="post">
+  <input type='date' name='start_date'>
+  <input type='date' name='end_date'>
+  <input type='submit' name='Book'>
+</form>
+
+<%= flash[:notice] %>
