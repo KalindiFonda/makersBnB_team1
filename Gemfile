@@ -12,3 +12,4 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
 gem 'bcrypt'
+gem "simple_calendar", "~> 2.0"
