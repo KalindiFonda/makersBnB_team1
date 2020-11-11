@@ -1,7 +1,6 @@
 feature "see the cat's profile" do
   scenario 'user visits catpage and sees cats profile' do
     cat = insert_cat
-    p cat.name
     visit("/cats/#{cat.id}") # cat id 1
     expect(page).to have_content("Snuggles")
     expect(page).to have_content("Dates Available")
@@ -12,7 +11,6 @@ feature "see the cat's profile" do
 
   scenario 'Make a booking request' do
     cat = Cat.create(name: 'Prongs', description: 'The cutest kitten', picture: "https://placekitten.com/g/600/300", price: 500)
-    p cat.id
     visit("/cats/#{cat.id}")
     fill_in 'start_date', with: '2020-11-10'
     fill_in 'end_date', with: '2020-11-14'
