@@ -4,7 +4,7 @@ p "Setting up test database..."
 
 def setup_test_database
   connection = PG.connect(dbname: 'cat_manager_test')
-  connection.exec("TRUNCATE cats, bookings;")
+  connection.exec("TRUNCATE cats, bookings, users;")
 end
 
 def insert_cat(name = 'Snuggles', description = 'Best to snuggle to',
