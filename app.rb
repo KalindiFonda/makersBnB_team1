@@ -13,6 +13,7 @@ class CatManager < Sinatra::Base
 
   get '/' do
     @cats = Cat.all
+     @user = User.find(session[:user_id])
     erb :index
   end
 
@@ -41,7 +42,8 @@ class CatManager < Sinatra::Base
 end
 
 post '/users' do
-  # create the user and then...
+  User.create(email: params[:email], password: params[:password])
+    @user = User.find(session[:user_id])
   redirect '/'
 end
 

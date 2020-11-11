@@ -5,10 +5,3 @@ CREATE TABLE users (
   email VARCHAR(60),
   password VARCHAR(140)
                 );
-
-
-INSERT INTO users (name, email, password)
-  VALUES ('Peter',
-          'test@test.com',
-          'password'
-           );
