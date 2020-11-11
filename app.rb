@@ -20,7 +20,7 @@ class CatManager < Sinatra::Base
   end
 
   post '/add_cat' do
-    @Cat_new = Cat.create(name: params[:name],description: params[:description] , picture: params[:picture], price: params[:price])
+    Cat.create(name: params[:name],description: params[:description] , picture: params[:picture], price: params[:price])
     redirect '/'
   end
 
