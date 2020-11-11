@@ -34,7 +34,7 @@ class CatManager < Sinatra::Base
   post '/cats/:id/book' do
     Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date], user_id: 10)
     flash[:notice] = "You got a Booked."
-    redirect "cats/#{:id}"
+    redirect "cats/#{params[:id]}"
   end
 
   run! if app_file == $0
