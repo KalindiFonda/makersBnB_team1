@@ -36,6 +36,15 @@ class CatManager < Sinatra::Base
     redirect "cats/#{:id}"
   end
 
+  get '/users/new' do
+  erb :"users/new"
+end
+
+post '/users' do
+  # create the user and then...
+  redirect '/'
+end
+
   run! if app_file == $0
 
 end
