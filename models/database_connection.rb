@@ -1,6 +1,6 @@
 require 'PG'
 
-class DatabaseConnection
+module DatabaseConnection
 
   def self.setup(database_name)
     @connection = PG.connect(dbname: database_name)
