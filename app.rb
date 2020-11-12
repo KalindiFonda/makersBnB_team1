@@ -1,9 +1,10 @@
 require 'sinatra/base'
 require './models/cat'
 require './models/booking'
-require './database_connection_setup'
+require './models/database_connection'
 require 'sinatra/flash'
 require 'simple_calendar'
+require './models/users'
 
 
 class CatManager < Sinatra::Base
