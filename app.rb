@@ -36,11 +36,6 @@ class CatManager < Sinatra::Base
   end
 
   post '/cats/:id/book' do
-    @user = User.create(email: params[:email],
-      password: params[:password])
-    session[:user_id] = @user.id
-    # TODO: this is probably pretty bad
-    # create user as there is no user
     Booking.create(cat_id: params[:id],
       booking_start: params[:start_date],
       booking_end: params[:end_date],
