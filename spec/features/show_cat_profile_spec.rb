@@ -10,6 +10,7 @@ feature "see the cat's profile" do
   end
 
   scenario 'Make a booking request' do
+    user = insert_user
     cat = Cat.create(name: 'Prongs', description: 'The cutest kitten', picture: "https://placekitten.com/g/600/300", price: 500)
     visit("/cats/#{cat.id}")
     fill_in 'start_date', with: '2020-11-10'
