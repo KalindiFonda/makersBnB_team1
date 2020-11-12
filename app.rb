@@ -4,6 +4,7 @@ require './models/booking'
 require './database_connection_setup'
 require 'sinatra/flash'
 require 'simple_calendar'
+require './models/user'
 
 
 class CatManager < Sinatra::Base
@@ -11,6 +12,8 @@ class CatManager < Sinatra::Base
   register Sinatra::Flash
 
   set :session_secret, "here be dragons"
+
+  attr_reader :user
 
   get '/' do
     @cats = Cat.all
