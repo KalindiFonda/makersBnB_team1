@@ -7,8 +7,8 @@ CREATE TABLE users (
                 );
 
 
-INSERT INTO users (name, email, password)
-  VALUES ('Peter',
-          'test@test.com',
-          'password'
-           );
+-- INSERT INTO users (name, email, password)
+--   VALUES ('Peter',
+--           'test@test.com',
+--           'password'
+--            );

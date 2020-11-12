@@ -11,3 +11,9 @@ def insert_cat(name = 'Snuggles', description = 'Best to snuggle to',
   picture = 'https://placekitten.com/g/600/300', price = 1000000000)
   Cat.create(name: name, description: description, picture: picture, price: price)
 end
+
+
+def insert_user
+  user = User.create(email: 'test@example.com', password: 'password123')
+  result = User.find(id: user.id)
+end
