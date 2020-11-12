@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset="UTF-8">
+     <title>Paws & Claws</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+ </head>
+ <body>
+
+       <div class="heading" style="width 70%">
+         <h1>Paws & Claws</h1>
+       </div>
+
+       <h2>
+         <%= flash[:notice] %>
+       <h2>
+  <div>Sign in or register to see cats.
+  <a href="/sessions/new"><button class="front_page" type="button" name="sign_in"> Sign in</button></a>
+  <a href="/users/new"><button class="front_page" type="button" name="register"> Register</button></a>
+</div>

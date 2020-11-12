@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <meta charset="UTF-8">
-   <title>Paws & Claws</title>
-    <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+     <meta charset="UTF-8">
+     <title>Paws & Claws</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
  </head>
  <body>
-   <table>
-     <tr>
+ <table>
+   <tr>
        <td class="heading" style="width 70%">
          <h1>Paws & Claws</h1>
        </td>
@@ -19,10 +19,14 @@
          <% if @user %>
             <h1>Welcome, <%= @user.email %></h1>
          <% end %>
-       </td>
-     </tr>
-   </table>
-<table>
+
+      <form action="/sessions/destroy" method="post">
+        <input type="submit" value="Sign out" />
+      </form>
+     </td>
+    </tr>
+  </table>
+  <table>
 
     <tr>
       <th> Name </th>
@@ -39,7 +43,7 @@
       <td><%= cat.price %></td>
       <td> <a href="/cats/<%=cat.id%>"><button style="button">Profile</button></a></td>
     </tr>
-    <% end %>
-  </table>
-</body>
+      <% end %>
+    </table>
+  </body>
 </html>
