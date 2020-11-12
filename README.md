@@ -85,19 +85,11 @@ psql -f db/migrate/00_setup_test.sql
 
 ### Booking Setup:
 
-| ID | cat_ID | booking_start | booking_end | (future)user_id   |
-|:----:|:----:|:----:|:----:|:----:|
-
+| ID | cat_ID | booking_start | booking_end | user_id   | status |
+|:----:|:----:|:----:|:----:|:----:|:----:|
 
 to add bookings table:
 ```
 psql -f db/migrate/04_create_bookings_table_test.sql
 psql -f db/migrate/04_create_bookings_table.sql
-```
-
-add status column to bookings table
-```
-psql -f db/migrate/05_add_status_column_test.sql
-psql -f db/migrate/05_add_status_column.sql
-
 ```

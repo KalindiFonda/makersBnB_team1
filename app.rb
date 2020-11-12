@@ -14,7 +14,7 @@ class CatManager < Sinatra::Base
 
   get '/' do
     @cats = Cat.all
-     @user = User.find(session[:user_id])
+    @user = User.find(session[:user_id])
     erb :index
   end
 
@@ -33,7 +33,7 @@ class CatManager < Sinatra::Base
   end
 
   post '/cats/:id/book' do
-    Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date], user_id: 10)
+    Booking.create(cat_id: params[:id],  booking_start: params[:start_date], booking_end: params[:end_date], user_id: session[:user_id])
     flash[:notice] = "You made a booking request."
     redirect "cats/#{params[:id]}"
   end
