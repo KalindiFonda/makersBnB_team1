@@ -14,8 +14,6 @@ class CatManager < Sinatra::Base
 
   set :session_secret, "here be dragons"
 
-  attr_reader :user
-
   get '/' do
     @cats = Cat.all
     @user = User.find(id: session[:user_id])
@@ -47,15 +45,15 @@ class CatManager < Sinatra::Base
   end
 
   get '/users/new' do
-  erb :"users/new"
-end
+    erb :"users/new"
+  end
 
-post '/users' do
-  @user = User.create(email: params[:email],
-    password: params[:password])
-  session[:user_id] = @user.id
-  redirect '/'
-end
+  post '/users' do
+    @user = User.create(email: params[:email],
+      password: params[:password])
+    session[:user_id] = @user.id
+    redirect '/'
+  end
 
   run! if app_file == $0
 
