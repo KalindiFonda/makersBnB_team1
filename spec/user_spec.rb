@@ -20,4 +20,9 @@ describe '.create' do
     expect(result.email).to eq user.email
   end
 end
+describe '.find' do
+  it 'returns nil if there is no ID given' do
+    expect(User.find(nil)).to eq nil
+  end
+end
 end
