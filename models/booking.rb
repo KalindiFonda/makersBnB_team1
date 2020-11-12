@@ -32,7 +32,7 @@ class Booking
   end
 
   def self.change_status(id: , status: )
-    result = DatabaseConnection.query("UPDATE bookings SET status = '#{status}' WHERE id = #{id} RETURNING id, cat_id, booking_start, booking_end, user_id, status")
+    result = DatabaseConnection.query("UPDATE bookings SET status = '#{status}' WHERE id = '#{id}' RETURNING id, cat_id, booking_start, booking_end, user_id, status")
     Booking.new(id: result[0]['id'], booking_start: result[0]['booking_start'],
                 booking_end: result[0]['booking_end'], cat_id: result[0]['cat_id'],
                 user_id: result[0]['user_id'], status: result[0]['status'])
