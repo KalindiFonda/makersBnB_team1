@@ -30,4 +30,11 @@ class Cat
             picture: result[0]['picture'], price: result[0]['price'])
   end
 
+  # private
+  #
+  # def create_cat_instance(params)
+  #   new(id: params["id"], name: params["name"], description: params["description"],
+  #               picture: params["picture"], price: params["price"])
+  # end
+
 end
