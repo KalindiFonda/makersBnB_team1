@@ -14,10 +14,14 @@ class CatManager < Sinatra::Base
 
   set :session_secret, "here be dragons"
 
-  get '/' do
+  get '/main' do
     @cats = Cat.all
     @user = User.find(id: session[:user_id])
     erb :index
+  end
+
+  get '/' do
+    erb :signupin
   end
 
   get '/cats/:id' do
@@ -32,7 +36,7 @@ class CatManager < Sinatra::Base
   post '/add_cat' do
     Cat.create(name: params[:name],description: params[:description] ,
       picture: params[:picture], price: params[:price])
-    redirect '/'
+    redirect '/main'
   end
 
   post '/cats/:id/book' do
@@ -52,7 +56,7 @@ class CatManager < Sinatra::Base
     @user = User.create(email: params[:email],
       password: params[:password])
     session[:user_id] = @user.id
-    redirect '/'
+    redirect '/main'
   end
 
   get '/sessions/new' do
@@ -64,7 +68,7 @@ class CatManager < Sinatra::Base
 
     if user
       session[:user_id] = user.id
-      redirect('/')
+      redirect('/main')
     else
       flash[:notice] = 'Please check your email or password.'
       redirect('/sessions/new')
