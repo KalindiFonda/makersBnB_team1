@@ -17,8 +17,8 @@ class Booking
   end
 
   def self.create(cat_id:, booking_start:, booking_end:, user_id:)
-    result = DatabaseConnection.query("INSERT INTO bookings (cat_id, booking_start, booking_end, user_id)
-                        VALUES ('#{cat_id}', '#{booking_start}', '#{booking_end}', #{user_id})
+    result = DatabaseConnection.query("INSERT INTO bookings (cat_id, booking_start, booking_end, user_id, status)
+                        VALUES ('#{cat_id}', '#{booking_start}', '#{booking_end}', #{user_id}, 'PENDING')
                         RETURNING id, cat_id, booking_start, booking_end, user_id, status")
     create_booking_instance(result[0])
   end
@@ -34,7 +34,6 @@ class Booking
     new(id: params['id'], booking_start: params['booking_start'],
         booking_end: params['booking_end'], cat_id: params['cat_id'],
         user_id: params['user_id'], status: params['status'])
-
   end
 
 end
