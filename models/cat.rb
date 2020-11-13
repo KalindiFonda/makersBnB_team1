@@ -38,4 +38,11 @@ class Cat
                 picture: params["picture"], price: params["price"])
   end
 
+  def self.destroy(name: ,description: , picture: , price: )
+    @Cat = Cat.find(params[:id])
+    @Cat.destroy
+
+    redirect_to "/"
+  end
+
 end
