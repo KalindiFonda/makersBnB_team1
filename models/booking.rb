@@ -28,6 +28,11 @@ class Booking
     create_booking_instance(result[0])
   end
 
+  def self.find_by_user(user_id: )
+    result = DatabaseConnection.query("SELECT * FROM bookings WHERE user_id = #{user_id}")
+    result.map { |booking| create_booking_instance(booking) }
+  end
+
   private
 
   def self.create_booking_instance(params)
