@@ -4,5 +4,5 @@ CREATE TABLE cats (id SERIAL PRIMARY KEY,
                   description VARCHAR(200),
                   picture VARCHAR(60),
                   price NUMERIC,
-                  user_id NUMERIC
+                  user_id INTEGER REFERENCES users (id)
                 )
