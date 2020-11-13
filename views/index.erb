@@ -17,8 +17,7 @@
 
       <form action="/sessions/destroy" method="post">
         <input type="submit" value="Sign out" /></form>
-        <form action="/my_account" method="post">
-          <input type="submit" value="My Account" /></form>
+        <a href="/my_account"><button class="front_page" type="button" name="my_account"> My Account</button></a>
         <% else %>
         <a href="/users/new"><button class="front_page" type="button" name="register"> Register</button></a>
         <a href="/sessions/new"><button class="front_page" type="button" name="register">Login</button></a></td>

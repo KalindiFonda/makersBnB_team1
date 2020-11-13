@@ -47,7 +47,7 @@ class Cat
 
   def self.belongs(user_id: )
     return nil unless user_id
-    result = DatabaseConnection.query("SELECT * FROM cats JOIN users(cats.user_id = users.id);")
+    result = DatabaseConnection.query("SELECT * FROM cats JOIN users ON (cats.user_id = users.id);")
     p result
     p "I'm trying to print"
 

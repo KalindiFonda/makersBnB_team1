@@ -81,11 +81,9 @@ class CatManager < Sinatra::Base
     redirect('/')
   end
 
-  post '/my_account' do
-    @user = User.create(email: params[:email],
-      password: params[:password])
-    session[:user_id] = @user.id
-    @users_cats =  Cat.belongs[user_id: session[:user_id]]
+
+  get '/my_account' do
+    @users_cats =  Cat.belongs(user_id: session[:user_id])
     erb :'users/account'
   end
 
