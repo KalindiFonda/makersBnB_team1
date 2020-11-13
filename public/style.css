@@ -18,6 +18,15 @@ h1{
 
 }
 
+h2 {
+  font-family:'Quicksand', sans-serif !important;
+  font-size: 30px;
+  color: #81C7C7 !important;
+  text-align: center;
+  display: inline-block;
+
+}
+
 .heading{
   text-align: center;
 }
