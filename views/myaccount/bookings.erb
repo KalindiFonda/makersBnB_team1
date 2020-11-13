@@ -1,0 +1,5 @@
+<% @mybookings.each do |booking| %>
+  <%= booking['name'] %>
+  <%= booking['booking_start'] %> - <%= booking['booking_end'] %>
+  <%= booking['status'] %><br>
+<% end %>
