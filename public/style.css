@@ -18,6 +18,15 @@ h1{
 
 }
 
+h2 {
+  font-family:'Quicksand', sans-serif !important;
+  font-size: 30px;
+  color: #81C7C7 !important;
+  text-align: center;
+  display: inline-block;
+
+}
+
 .heading{
   text-align: center;
 }
@@ -28,9 +37,9 @@ h1{
 table{
   margin: 0 auto;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 td{
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }

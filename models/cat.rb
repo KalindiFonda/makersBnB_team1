@@ -34,4 +34,19 @@ class Cat
                 picture: params["picture"], price: params["price"])
   end
 
+  def self.destroy(name: ,description: , picture: , price: )
+    @Cat = Cat.find(params[:id])
+    @Cat.destroy
+
+    redirect_to "/"
+  end
+
+  def self.belongs(user_id: )
+    return nil unless user_id
+    result = DatabaseConnection.query("SELECT * FROM cats JOIN users ON (cats.user_id = users.id);")
+
+  end
+
+
+
 end
