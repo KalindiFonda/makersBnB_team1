@@ -67,6 +67,12 @@ So that I can review my host
 I want to be able to leave a review of the host.
 ```
 
+```
+As a user
+So my cat doesn't appear in the list
+I want to be able to delete their profile.
+```
+
 ### What is going on?
 [link to rake setup](https://github.com/sinatra/sinatra-recipes/blob/master/databases/postgresql-activerecord.md)
 
