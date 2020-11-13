@@ -13,13 +13,13 @@ feature 'Deleting a cat' do
     click_button('Create New Cat')
 
     visit('/cat/#{id}')
-    expect(page).to have_content(name: "Henry", description: "A real gent"] ,
+    expect(page).to have_content(name: "Henry", description: "A real gent",
       picture: "https://placekitten.com/g/600/300", price: "500")
 
     first('.cat').click_button 'Delete'
 
     expect(current_path).to eq '/my_cats'
-    expect(page).not_to have_link(name: "Henry", description: "A real gent"] ,
+    expect(page).not_to have_link(name: "Henry", description: "A real gent",
       picture: "https://placekitten.com/g/600/300", price: "500")
   end
 end

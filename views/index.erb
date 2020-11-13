@@ -11,19 +11,18 @@
    <tr>
        <td class="heading" style="width 70%">
          <h1>Paws & Claws</h1>
-       </td>
-       <td class="newcat" style="width 15%">
-         <a href="/add"><button class="adding" type="button" name="add_cats"> Add a cat</button></a>
-       </td>
        <td class="newuser" style="width 15%">
          <% if @user %>
             <h1>Welcome, <%= @user.email %></h1>
-         <% end %>
 
       <form action="/sessions/destroy" method="post">
-        <input type="submit" value="Sign out" />
-      </form>
-     </td>
+        <input type="submit" value="Sign out" /></form>
+        <form action="/my_account" method="post">
+          <input type="submit" value="My Account" /></form>
+        <% else %>
+        <a href="/users/new"><button class="front_page" type="button" name="register"> Register</button></a>
+        <a href="/sessions/new"><button class="front_page" type="button" name="register">Login</button></a></td>
+               <% end %>
     </tr>
   </table>
   <table>

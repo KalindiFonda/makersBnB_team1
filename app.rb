@@ -14,13 +14,13 @@ class CatManager < Sinatra::Base
 
   set :session_secret, "here be dragons"
 
-  get '/main' do
+  get '/' do
     @cats = Cat.all
     @user = User.find(id: session[:user_id])
     erb :index
   end
 
-  get '/' do
+  get '/login' do
     erb :signupin
   end
 
@@ -56,7 +56,7 @@ class CatManager < Sinatra::Base
     @user = User.create(email: params[:email],
       password: params[:password])
     session[:user_id] = @user.id
-    redirect '/main'
+    redirect '/'
   end
 
   get '/sessions/new' do
@@ -68,7 +68,7 @@ class CatManager < Sinatra::Base
 
     if user
       session[:user_id] = user.id
-      redirect('/main')
+      redirect('/')
     else
       flash[:notice] = 'Please check your email or password.'
       redirect('/sessions/new')
@@ -79,6 +79,13 @@ class CatManager < Sinatra::Base
     session.clear
     flash[:notice] = 'You have signed out.'
     redirect('/')
+  end
+
+  post '/my_cats' do
+    @user = User.create(email: params[:email],
+      password: params[:password])
+    session[:user_id] = @user.id
+    @users_cats =  User.all
   end
 
   run! if app_file == $0
