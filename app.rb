@@ -82,9 +82,16 @@ class CatManager < Sinatra::Base
   end
 
 
+  get '/myaccount/:id/bookings' do
+    @user = User.find(id: session[:user_id])
+    @mybookings = Booking.find_by_user(user_id: @user.id)
+    erb :'myaccount/bookings'
+
+
   get '/my_account' do
     @users_cats =  Cat.belongs(user_id: session[:user_id])
     erb :'users/account'
+
   end
 
   run! if app_file == $0

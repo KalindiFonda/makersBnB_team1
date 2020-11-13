@@ -29,8 +29,9 @@ class Booking
   end
 
   def self.find_by_user(user_id: )
-    result = DatabaseConnection.query("SELECT * FROM bookings WHERE user_id = #{user_id}")
-    result.map { |booking| create_booking_instance(booking) }
+    result = DatabaseConnection.query("SELECT *
+          FROM bookings JOIN cats ON (cat_id=cats.id) WHERE bookings.user_id = #{user_id}")
+    result.map { |booking| booking}
   end
 
   private
@@ -40,5 +41,6 @@ class Booking
         booking_end: params['booking_end'], cat_id: params['cat_id'],
         user_id: params['user_id'], status: params['status'])
   end
+
 
 end

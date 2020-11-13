@@ -13,7 +13,11 @@
          <h1>Paws & Claws</h1>
        <td class="newuser" style="width 15%">
          <% if @user %>
-            <h2>Welcome, <%= @user.email %></h2>
+            <h1>Welcome, <%= @user.email %></h1>
+            <a href="/myaccount/<%=@user.id%>/bookings"><button style="button">My bookings</button></a>
+         <% end %>
+
+
 
       <form action="/sessions/destroy" method="post">
         <input type="submit" value="Sign out" /></form>
@@ -34,7 +38,7 @@
       <th> Link to Profile </th>
       </tr>
       <% @cats.each do |cat| %>
-      <tr>
+      <tr class = 'cat' >
       <td><%= cat.name %></td>
       <td><%= cat.description %></td>
       <td> <img class="cat-picture" src='<%=cat.picture%>' alt="picture of a cat"></td>
