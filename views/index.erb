@@ -15,7 +15,6 @@
          <% if @user %>
             <h1>Welcome, <%= @user.email %></h1>
             <a href="/myaccount/<%=@user.id%>/bookings"><button style="button">My bookings</button></a>
-         <% end %>
 
 
 
@@ -25,7 +24,7 @@
         <% else %>
         <a href="/users/new"><button class="front_page" type="button" name="register"> Register</button></a>
         <a href="/sessions/new"><button class="front_page" type="button" name="register">Login</button></a></td>
-               <% end %>
+        <% end %>
     </tr>
   </table>
   <table>
